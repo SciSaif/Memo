@@ -22,6 +22,10 @@ header {
     font-family: sans-serif;
     font-size: 25px;
     color: white;
+    webkit-user-select: none; /* Safari */        
+    -moz-user-select: none; /* Firefox */
+    -ms-user-select: none; /* IE10+/Edge */
+    user-select: none; /* Standard */
 }
 
 
@@ -48,7 +52,7 @@ li {
     justify-content: left;
     align-items: center;
     font-size: 0.5rem;
-
+    transition: all 0.3s ease;
 }
 .fa-sticky-note {
     margin-left: 10px;
@@ -75,8 +79,34 @@ li .fa-trash {
     cursor: pointer;
     color: rgb(73, 72, 72);
 }
+.fa-trash:hover {
+    animation: trashAnimation 0.5s ease ;
+    animation-fill-mode: forwards;
+}
+@keyframes trashAnimation {
+    from{color: #ff8a00;}
+    to{color: #ff0000};
+    25% {
+        transform: rotate(45deg);
+    }
+    50% {
+        transform: rotate(-45deg);
+    }
+    75% {
+        transform: rotate(45deg);
+    }
+    100% {
+        transform: rotate(0deg);
+    }
 
+}
+.fa-trash:active {
+    transform: translate(10px 1px);
+}
 
+li:active {
+    background: rgb(221, 166, 16);
+}
 
 .slider {
     background: rgb(245, 244, 234);
@@ -117,6 +147,11 @@ li .fa-trash {
     border-radius: 0 0 100% 100%;
     box-shadow: 0px 1px 3px black;
     cursor: pointer;
+
+    webkit-user-select: none; /* Safari */        
+    -moz-user-select: none; /* Firefox */
+    -ms-user-select: none; /* IE10+/Edge */
+    user-select: none; /* Standard */
 }
 .fa-plus-square {
     color: white;
@@ -127,6 +162,11 @@ li .fa-trash {
     font-size: 40px;
     margin: 6px 10px;
 }
+.add-box:active {
+    box-shadow: none;
+
+}
+
 
 .top {
     display: flex;
