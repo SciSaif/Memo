@@ -1,0 +1,168 @@
+*{margin: 0;padding: 0;box-sizing: border-box;}
+body {
+    height: 100vh;
+    background: linear-gradient(to right, rgb(250, 82, 63), rgb(185, 24, 6));
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-family: sans-serif;
+}
+
+header {
+    background: rgba(0, 0, 0, 0.247);
+    width: 90vw;
+    max-width: 500px;
+    height: 35px;
+    border: none;
+    border-radius: 15px 15px 0 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: sans-serif;
+    font-size: 25px;
+    color: white;
+}
+
+
+.container {
+    width: 90vw;
+    max-width: 500px;
+    height: 80vh;
+    background: white;
+    
+    
+}
+ul {
+    width: 100%;
+    height: 100%;
+    border-bottom: 1px solid rgb(75, 74, 74);
+
+}
+
+li {
+    width: 100%;
+    height: 60px;
+    border-bottom: 1px solid rgb(192, 191, 191);
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    font-size: 0.5rem;
+
+}
+.fa-sticky-note {
+    margin-left: 10px;
+    color: sandybrown;
+    /* border-right: 1px solid rgb(214, 213, 213);
+    border-radius: 0 20px 20px 0;
+    box-shadow: 1px 0 2px black; */
+    padding: 5px;
+}
+li p{
+    width: 72%;
+    margin-left: 5px;
+    padding: 10px;
+    font-size: 20px;
+    color: rgb(41, 40, 40);
+}
+li .fa-trash {
+    margin-left: 9%;
+    margin-right: 10px;
+    cursor: pointer;
+    color: rgb(73, 72, 72);
+}
+
+
+
+.slider {
+    background: rgb(245, 244, 234);
+    position: absolute;
+    top: 8.2vh;
+
+	overflow-y: hidden;
+	overflow-x: hidden;
+    
+    height: 80vh ;
+    max-height: 80vh; /* approximate max height */
+    width: 90vw ;
+    max-width: 500px;
+
+	transition-property: all;
+	transition-duration: .5s;
+    transition-timing-function: cubic-bezier(0, 1, 0.5, 1);
+    
+}
+
+.slider.closed {
+	max-height: 0;
+}
+
+
+
+
+
+
+.add-box {
+    background: rgba(0, 0, 0, 0.247);
+    width: 90vw;
+    max-width: 500px;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 0 0 100% 100%;
+    box-shadow: 0px 1px 3px black;
+    cursor: pointer;
+}
+.fa-plus-square {
+    color: white;
+    margin: 6px 10px;
+}
+.add-box p{
+    color: white;
+    font-size: 40px;
+    margin: 6px 10px;
+}
+
+.top {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 100%;
+    height: 8%;
+    /* border-bottom: 1px solid rgb(87, 87, 87); */
+    box-shadow: 0 1px 6px rgb(90, 89, 89);
+}
+.cancel {
+    width: 120px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2px 20px;
+    cursor: pointer;
+}
+.save {
+    width: 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2px 20px;
+    cursor: pointer;
+}
+.save p, .cancel p {
+    font-size: 18px;
+    padding:  0 10px;
+}
+.plus {color: rgb(15, 116, 15);}
+.cross {color: red; transform: rotate(45deg)}
+
+.cancel:active, .save:active {
+    border: 1px solid rgb(107, 106, 106);
+    border-radius: 50px;
+}
+
+
+
+.invisible {
+    opacity: 0;
+}
