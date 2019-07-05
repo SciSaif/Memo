@@ -7,6 +7,7 @@ const cancel = document.querySelector('.cancel');
 const title = document.querySelector('.title');
 const notes = document.querySelector('.notes');
 const list = document.querySelector('ul');
+const audio = document.querySelector('audio');
 
 var id = 1, store = [];
 
@@ -58,6 +59,9 @@ function loadData(){
 
 addBox.addEventListener('click', slide);
 function slide(){
+    audio.currentTime = 0;
+    audio.play();
+
     slider.classList.toggle('closed');
     addBoxChildren[0].classList.toggle('invisible');
     addBoxChildren[1].classList.toggle('invisible');
@@ -66,6 +70,9 @@ function slide(){
 save.addEventListener('click', add);
 
 function add() {
+    audio.currentTime = 0;
+    audio.play();
+
     const titleVal = title.value;
     const notesVal = notes.value;
 
@@ -101,6 +108,9 @@ function add() {
 
 cancel.addEventListener('click', cancelAdd);
 function cancelAdd() {
+    audio.currentTime = 0;
+    audio.play();
+
     title.value = '';
     notes.value = '';
     slide();
@@ -109,6 +119,9 @@ function cancelAdd() {
 
 
 function removeItem(element) {
+    audio.currentTime = 0;
+    audio.play();
+
     const elementId = element.attributes.id.value;
     element.parentNode.remove(element);
 
